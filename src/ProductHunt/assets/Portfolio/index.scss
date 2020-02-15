@@ -1,0 +1,84 @@
+@import '../../../global.scss';
+
+.portfolio{
+    background-color: white;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+    border-radius: 3px;
+    margin: 0 0 15px 0;
+    &__wrapper{
+        @include flex-box(space-between, center);
+        padding: 10px 10px;
+        &-image{
+            width: 80px;
+            border-radius: 100%;
+        }
+        &-title{
+            width : 100%;
+            padding-left: 20px;
+            h4{
+                margin: 5px;
+            }
+            p{
+                font-size: 12px;
+                color: #939393;
+                margin: 0 5px;
+            }
+        }
+        &-votes{
+            width: 100px;
+            text-align: center;
+            img{
+                width: 30px;
+            }
+            p{
+                margin: 0;
+                font-size: 10px;
+                font-weight: 100;
+            }
+        }
+    }
+
+    &__activity{
+        border-top: 1px solid rgba(0,0,0,.1);
+        padding: 3px 10px;
+        font-size: 10px;
+        @include flex-box(center, center);
+        &--chip-box{
+            border: 1px solid rgba(0,0,0,.1);
+            padding: 3px;
+            margin: 3px;
+            height: 25px;
+            width: 25px;
+            border-radius: 100%;
+            @include flex-box(center, center);
+        }
+        .social-icon{
+            width: 20px;
+            height: 25px;
+            background-image: url('https://dl3.pushbulletusercontent.com/1H4ssCewExxFugkHMBmfDegkhvXZ1GG9/68747470733a2f2f7261772e6769746875622e636f6d2f626368616e782f6c6f676f732d696e2d707572652d6373732f6d61737465722f62616e6e.png');
+            background-size: cover;
+            &.facebook{
+                background-position-x: 199px;
+            }
+            &.LinkedIn{
+                background-position-x: 333px;
+            }
+            &.gitHub{
+                background-position-x: 284px;
+            }
+        }
+    }
+}
+
+.skill{
+    border: 1px solid rgba(0,0,0,.1);
+    text-align: center;
+    &-list{
+        @include flex-box(center, center);
+        flex-wrap: wrap;
+        .chips{
+            @include chips;
+        }
+    }
+
+}

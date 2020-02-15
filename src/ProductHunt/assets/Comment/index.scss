@@ -1,0 +1,104 @@
+@import '../../../global.scss';
+
+.comment{
+    background-color: white;
+    border-radius: 3px;
+    margin: 0 0 15px 0;
+    &__wrapper{
+        @include flex-box(space-between, center);
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+        padding: 10px 10px;
+        &-image{
+            width: 80px;
+            height: 80px;
+        }
+        &-title{
+            width : 100%;
+            padding-left: 20px;
+            position: relative;
+            h4{
+                margin: 5px;
+            }
+            p{
+                font-size: 12px;
+                color: #939393;
+                margin: 0 5px;
+            }
+            .chips{
+                @include chips;
+            }
+        }
+        &-votes{
+            width: 100px;
+            text-align: center;
+            img{
+                width: 30px;
+            }
+            p{
+                margin: 0;
+                font-size: 10px;
+                font-weight: 100;
+            }
+        }
+    }
+
+    &__cover{
+        padding: 20px;
+        img{
+            width: 100%;
+            height: 300px;
+            @media screen and (max-width: 740px){
+                height: 150px;
+            }
+        }
+
+    }
+
+    &__disscuss-tag{
+        background-color: #f3f3f3;
+        padding: 10px;
+        padding-top: 40px;
+        color: #6f6f6f;
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    &__activity-comment{
+        padding: 3px 20px;
+        font-size: 12px;
+        &-user{
+            @include flex-box(left, center);
+            img{
+                width: 30px;
+                height: 30px;
+                border-radius: 100%;
+            }
+            p{
+                font-weight: bold;
+                margin-left: 12px;
+            }
+        }
+        &--user-comment{
+            margin: 0 0 0 50px;
+        }
+    }
+
+    &__activity{
+        border-radius: 3px;
+        &--loading{
+            color: #6f6f6f;
+            padding : 30px 20px;
+        }
+    }
+}
+
+.comment__activity-comment-user{
+    .load-comments{
+        text-align: center;
+        width: 100%;
+        color: rgb(96, 125, 138);
+        border-top: 1px dashed #607d8a;
+        margin: 10px 0;
+        padding: 10px;
+    }
+}
